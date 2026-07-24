@@ -6,9 +6,12 @@ name=input()
 print('now enter your username you want')
 print()
 username=input()
-print('enter the oassword you want')
+print('enter the password you want')
 print()
 password=input()
 while len(password)<8:
   password=input('try again')
-
+acount_data={"name":name,"email":username,"password":password}
+dfinfo=pd.DataFrame([acount_data])
+df=pd.concat([df, dfinfo], ignore_index=True)
+df.to_csv("identity.csv", index=False)
