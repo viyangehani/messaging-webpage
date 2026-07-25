@@ -15,3 +15,4 @@ acount_data={"name":name,"email":username,"password":password}
 dfinfo=pd.DataFrame([acount_data])
 df=pd.concat([df, dfinfo], ignore_index=True)
 df.to_csv("identity.csv", index=False)
+print(f'acount created, acount details:{acount_data}')
